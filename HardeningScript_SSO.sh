@@ -2,8 +2,8 @@
 
 # Actualizaciones de paquetería.
 echo "[!] Actualizando paquetes..."
-sudo apt-get update >> /var/log/hardening.log
-sudo apt-get upgrade -y >> /var/log/hardening.log
+sudo yum update >> /var/log/hardening.log
+sudo yum upgrade -y >> /var/log/hardening.log
 echo "[+] Se actualizaron los paquetes con éxito." >> /var/log/hardening.log
 
 
@@ -79,8 +79,3 @@ echo "[+] Se estableció LogLevel a INFO." >> /var/log/hardening.log
 systemctl restart sshd
 echo "[+] Se reinció el servicio SSH." >> /var/log/hardening.log
 echo "[+] Se terminó de configurar SSH." >> /var/log/hardening.log
-
-# Configurar SSH
-#echo "[!] Configurando SSH..."
-#sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config
-#sudo sed -i 's/#StrictModes yes/StrictModes
