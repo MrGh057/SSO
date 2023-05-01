@@ -50,7 +50,7 @@ sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
 echo "[+] SELinux deshabilitado." >> /var/log/hardening.log
 # Instalando antivirus
 echo "[!] Instalando ClamAV antivirus..."
-sudo apt-get install clamav -y >> /var/log/hardening.log
+sudo yum install clamav -y >> /var/log/hardening.log
 echo "[+] Se instaló ClamAV antivirus." >> /var/log/hardening.log
 
 
